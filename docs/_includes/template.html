@@ -2,6 +2,7 @@
 {% capture rendered %}
     {% include {{ page }} %}
 {% endcapture %}
+
 <article id="{{rendered.src}}">
     <header>
         <div>
@@ -13,13 +14,13 @@
                 {{rendered.title}}
             </div>
 
-            {% if rendered.description %}
+            {% if rendered.description != blank %}
                 <div class="description">
                     {{rendered.description}}
                 </div>
             {% endif %}
 
-            {% if rendered.note != null}
+            {% if rendered.note != blank %}
                 <div class="note">
                     {{rendered.note}}
                 </div>
