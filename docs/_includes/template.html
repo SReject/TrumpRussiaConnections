@@ -1,18 +1,20 @@
 {% assign src_end = include.src | slice: -5, 5 %}
-{% assign id = include.src %}
+{% assign linkid = include.src %}
 {% assign page_src = "pagelets/" | append: include.src %}
 
 {% if src_end == ".html" %}
-    {% assign id = include.src | slice: 0, {{include.src | size | minus: 5}} %}
+    {% assign len = include.src | size | minus: 5 %}
+    {% assign linkid = include.src | slice: 0, len %}
+
 {% else %}
     {% assign page_src = page_src | append: "/index.html" %}
 {% endif %}
 
-<article id="{{id}}">
+<article id="section/{{ linkid }}">
     <header>
         <div>
             <div class="copylink">
-                <a href="#{{id}}"><i class="fa fa-link"></i></a>
+                <a href="#section/{{ linkid }}"><i class="fa fa-link"></i></a>
             </div>
             <div class="title">{{ include.title }}</div>
             {% if include.description %}
