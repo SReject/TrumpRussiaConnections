@@ -1,6 +1,6 @@
 {% assign page = "pagelets/" | append: include.src %}
 
-{% assign src_end = include.src | slice: -5, 5 }
+{% assign src_end = include.src | slice: -5, 5 %}
 
 {% if src_end != ".html" %}
   {% assign page = {{ page }} | append: "/index.html" %}
