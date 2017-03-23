@@ -6,5 +6,4 @@ script: jekyll build
 branches:
   only:
   - master
-
 sudo: false
