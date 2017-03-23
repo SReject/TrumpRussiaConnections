@@ -1,9 +1,9 @@
 {% assign src_end = include.src | slice: -5, 5 %}
 
-{% if src_end != ".html" %}
-    {% assign page = "pagelets/" | append: include.src | append: "/index.html" %}
-{% else %}
+{% if src_end == ".html" %}
     {% assign page = "pagelets/" | append: include.src %}
+{% else %}
+    {% assign page = "pagelets/" | append: include.src | append: "/index.html" %}
 {% endif %}
 
 {% capture rendered %}
@@ -21,20 +21,16 @@
                 {{ rendered.title }}
             </div>
 
-            {% if rendered.description != blank %}
-                <div class="description">
-                    {{ rendered.description }}
-                </div>
+            {% if rendered.description %}
+                <div class="description">{{ rendered.description }}</div>
             {% endif %}
 
-            {% if rendered.note != blank %}
-                <div class="note">
-                    {{ rendered.note }}
-                </div>
+            {% if rendered.note %}
+                <div class="note">{{ rendered.note }}</div>
             {% endif %}
         </div>
     </header>
     <section>
-        {{ rendered.content }}
+        {{ rendered }}
     </section>
 </article>
