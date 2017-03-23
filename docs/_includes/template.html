@@ -1,9 +1,9 @@
-{% assign page = "pagelets/" | append: include.src %}
-
 {% assign src_end = include.src | slice: -5, 5 %}
 
 {% if src_end != ".html" %}
-  {% assign page = {{ page }} | append: "/index.html" %}
+    {% assign page = "pagelets/" | append: include.src | append: "/index.html" %}
+{% elif %}
+    {% assign page = "pagelets/" | append: include.src %}
 {% endif %}
 
 {% capture rendered %}
