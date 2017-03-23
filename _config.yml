@@ -6,6 +6,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
   - readme.md
   - .gitignore
   - .gitattributes

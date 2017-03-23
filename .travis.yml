@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.3.3
+before_script: cd docs
+script: jekyll build
+branches:
+  only:
+  - master
+
+sudo: false
