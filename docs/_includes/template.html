@@ -1,18 +1,12 @@
 {% assign src_end = include.src | slice: -5, 5 %}
+{% assign id = include.src %}
+{% assign page_src = "pagelets/" | append: include.src %}
 
 {% if src_end == ".html" %}
-    {% assign page_src = "pagelets/" | append: include.src %}
-
-    {% capture len %}{{page_src | size | minus: 5}}{% endcapture %}
-    {% assign id = include.src | slice: 0, len %}
+    {% assign id = include.src | slice: 0, {{include.src | size | minus: 5}} %}
 {% else %}
-    {% assign page_src = "pagelets/" | append: include.src | append: "/index.html" %}
-    {% assign id = include.src %}
+    {% assign page_src = page_src | append: "/index.html" %}
 {% endif %}
-
-{% capture rendered %}
-    {% include {{ page_src }} %}
-{% endcapture %}
 
 <article id="{{id}}">
     <header>
@@ -30,6 +24,6 @@
         </div>
     </header>
     <section>
-        {{ rendered }}
+        {% include {{ page_src }} %}
     </section>
 </article>
