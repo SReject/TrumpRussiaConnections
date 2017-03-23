@@ -1,0 +1,14 @@
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - readme.md
+  - .gitignore
+  - .gitattributes
+
+title: Trump-Russia Connections
+description: Connections between Trump and Russia
