@@ -163,3 +163,9 @@ template {
 [hidden] {
     display: none;
 }
+
+
+#pageheader {
+  height: 256px;
+  background: url('./banner.png') center;
+}

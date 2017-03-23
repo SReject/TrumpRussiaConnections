@@ -8,9 +8,10 @@
 
 {% else %}
     {% assign page_src = page_src | append: "/index.html" %}
+
 {% endif %}
 
-<article id="section/{{ linkid }}">
+<article data-title="{{ include.title }}" id="section/{{ linkid }}">
     <header>
         <div>
             <div class="copylink">
