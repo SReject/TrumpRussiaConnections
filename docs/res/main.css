@@ -167,5 +167,5 @@ template {
 
 #pageheader {
   height: 256px;
-  background: url('./banner.png') center;
+  background: url('./banner.png') center no-repeat;
 }
