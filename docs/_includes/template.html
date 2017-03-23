@@ -4,7 +4,7 @@
     {% assign page_src = "pagelets/" | append: include.src %}
 
     {% capture len %}{{page_src | size | minus: 5}}{% endcapture %}
-    {% assign id = include.src | slice: 0, {{len}} %}
+    {% assign id = include.src | slice: 0, len %}
 {% else %}
     {% assign page-src = "pagelets/" | append: include.src | append: "/index.html" %}
     {% assign id = include.src %}
