@@ -2,7 +2,7 @@
 
 {% if src_end != ".html" %}
     {% assign page = "pagelets/" | append: include.src | append: "/index.html" %}
-{% elsif %}
+{% else %}
     {% assign page = "pagelets/" | append: include.src %}
 {% endif %}
 
