@@ -1,5 +1,6 @@
+{% assign page = 'pagelets/' | append: {{include.src}} | append: '.html' %}
 {% capture rendered %}
-    {% include {{ 'pagelets/' | append: {{include.src}} | append: '.html' }} %}
+    {% include {{ page }} %}
 {% endcapture %}
 <article id="{{rendered.src}}">
     <header>
