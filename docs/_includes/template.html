@@ -2,8 +2,10 @@
 
 {% if src_end == ".html" %}
     {% assign page = "pagelets/" | append: include.src %}
+    {% assign id = include.src | slice: 0, -5 %}
 {% else %}
     {% assign page = "pagelets/" | append: include.src | append: "/index.html" %}
+    {% assign id = include.src %}
 {% endif %}
 
 {% capture rendered %}
