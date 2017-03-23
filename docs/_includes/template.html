@@ -10,23 +10,18 @@
     {% include {{ page }} %}
 {% endcapture %}
 
-<article id="{{rendered.src}}">
+<article id="{{include.src}}">
     <header>
         <div>
             <div class="copylink">
                 <a href="#{{include.src}}"><i class="fa fa-link"></i></a>
             </div>
-
-            <div class="title">
-                {{ rendered.title }}
-            </div>
-
-            {% if rendered.description %}
-                <div class="description">{{ rendered.description }}</div>
+            <div class="title">{{ include.title }}</div>
+            {% if include.description %}
+            <div class="description">{{ include.description }}</div>
             {% endif %}
-
-            {% if rendered.note %}
-                <div class="note">{{ rendered.note }}</div>
+            {% if include.note %}
+            <div class="note">{{ include.note }}</div>
             {% endif %}
         </div>
     </header>
