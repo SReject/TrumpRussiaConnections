@@ -8,6 +8,7 @@ html, body {
     -webkit-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 article, aside, footer, header, nav, section {
     display: block;
@@ -166,7 +167,7 @@ template {
 
 
 /* page specific rules */
-article > header > .title {
+article > header .title {
   font-size: 3em;
 }
 article {
