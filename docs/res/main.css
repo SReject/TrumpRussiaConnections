@@ -165,7 +165,13 @@ template {
 }
 
 
-#pageheader {
-  height: 256px;
-  background: url('./banner.png') center no-repeat;
+/* page specific rules */
+article > header > .title {
+  font-size: 3em;
+}
+article {
+  font-size: .95em;
+}
+article > section {
+  font-size: 1rm;
 }

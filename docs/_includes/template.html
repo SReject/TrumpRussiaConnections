@@ -14,16 +14,10 @@
 <article data-title="{{ include.title }}" id="section/{{ linkid }}">
     <header>
         <div>
-            <div class="copylink">
-                <a href="#section/{{ linkid }}"><i class="fa fa-link"></i></a>
-            </div>
+            <div class="copylink"><a href="#section/{{ linkid }}"><i class="fa fa-link"></i></a></div>
             <div class="title">{{ include.title }}</div>
-            {% if include.description %}
-            <div class="description">{{ include.description }}</div>
-            {% endif %}
-            {% if include.note %}
-            <div class="note">{{ include.note }}</div>
-            {% endif %}
+            {% if include.description %}<div class="description">{{ include.description }}</div>{% endif %}
+            {% if include.note %}<div class="note">{{ include.note }}</div>{% endif %}
         </div>
     </header>
     <section>
